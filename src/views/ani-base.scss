@@ -1,0 +1,165 @@
+.rotateX-hover {
+  &:hover {
+    animation: rotateX 5s infinite linear;
+  }
+}
+.rotateX {
+  animation: rotateX 5s infinite linear;
+}
+
+.rotateY-hover {
+  &:hover {
+    animation: rotateY 5s infinite linear;
+  }
+}
+.rotateY {
+  animation: rotateY 5s infinite linear;
+}
+
+.rotateZ-hover {
+  &:hover {
+    animation: rotateZ 5s infinite linear;
+  }
+  border-radius: 50%;
+}
+
+.rotateZ {
+  animation: rotateZ 5s infinite linear;
+  border-radius: 50%;
+}
+
+.translateX-hover {
+  &:hover {
+    animation: translateX 2s infinite alternate;
+  }
+}
+.translateX {
+  animation: translateX 2s infinite alternate;
+}
+
+.translateY-hover {
+  &:hover {
+    animation: translateY 2s infinite alternate;
+  }
+}
+.translateY {
+  animation: translateY 2s infinite alternate;
+}
+
+.translateZ-hover {
+  &:hover {
+    animation: translateZ 2s infinite alternate;
+  }
+}
+.translateZ {
+  animation: translateZ 2s infinite alternate;
+}
+
+.scale-hover {
+  &:hover {
+    animation: scale 5s infinite alternate;
+  }
+}
+
+.scale {
+  animation: scale 5s infinite alternate;
+}
+
+.skewX-hover {
+  &:hover {
+    animation: skewX 5s infinite alternate;
+  }
+}
+.skewX {
+  animation: skewX 5s infinite alternate;
+}
+
+.skewY-hover {
+  &:hover {
+    animation: skewY 5s infinite alternate;
+  }
+}
+.skewY {
+  animation: skewY 5s infinite alternate;
+}
+
+
+@keyframes rotateX {
+  0% {}
+
+  100% {
+    transform: rotateX(-360deg);
+  }
+}
+
+@keyframes rotateY {
+  0% {}
+
+  100% {
+    transform: rotateY(-360deg);
+  }
+}
+
+@keyframes rotateZ {
+  0% {}
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes translateX {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes translateY {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes translateZ {
+  0% {
+    transform: translateZ(-10px);
+  }
+
+  100% {
+    transform: translateZ(10px);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes skewX {
+  0% {}
+
+  100% {
+    transform: skewX(-360deg);
+  }
+}
+
+@keyframes skewY {
+  0% {}
+
+  100% {
+    transform: skewY(-360deg);
+  }
+}

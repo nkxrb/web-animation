@@ -1,0 +1,148 @@
+.wrapper{
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.block{
+  margin: 20px auto;
+  border: 1px solid currentColor;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-around;
+  h4{
+    width: 100%;
+  }
+}
+
+.item{
+  width: 80px;
+  margin: 12px;
+  div{
+    background-color: coral;
+    width: 80px;
+    height: 80px;
+    &::before{
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: greenyellow;
+      border-radius: 50%;
+      position: relative;
+      left: calc(50% - 5px);
+      top: 8px;
+    }
+  }
+  p{
+    margin-top: 12px;
+  }
+}
+
+.canvas{
+  width: 30vw;
+  height: 30vw;
+  background-color: antiquewhite;
+}
+.canvas+.canvas{
+  margin-left: 12px;
+}
+
+.ball{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: chartreuse;
+}
+
+.ball-translateX{
+  animation: translateX30 5s cubic-bezier(0.5, 0, 0.5, 1) -2.5s infinite alternate;
+}
+
+.ball-translateY{
+  animation: translateY30 5s infinite alternate;
+}
+
+@keyframes translateX30 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(30vw - 30px));
+  }
+}
+@keyframes translateY30 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(calc(30vw - 30px));
+  }
+}
+
+
+.d3-parent{
+  width: 100%;
+  height: 560px;
+  background-color: azure;
+  /* 透视距离 */
+  perspective: 800px;
+  /* 透视倾斜度 */
+  perspective-origin: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .d3-center{
+    width: 18px;
+    height: 60px;
+    background-color: red;
+    position: relative;
+    /* 3维空间 */
+    transform-style: preserve-3d;
+    /* 执行动画 */
+    animation: autoRotateY 5s infinite linear;
+
+    .d3-child {
+      width: 50px;
+      height: 50px;
+      /* 反面的不显示 */
+      // backface-visibility: hidden;
+      /* 绝对位置--相对于中心点 */
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25px;
+      background-image: linear-gradient(to top, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    }
+  }
+}
+
+@keyframes autoRotateX {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-360deg);
+  }
+}
+
+@keyframes autoRotateY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+@keyframes autoRotateXY {
+  from {
+  }
+  to {
+    transform: rotateY(-360deg) rotateX(-360deg);
+  }
+}
