@@ -4,7 +4,7 @@
       <h4>基础动画</h4>
       <template v-for="prop in baseList" :key="prop">
         <div class="item" >
-          <div :class="`${prop}-hover`"></div>
+          <div :class="`${prop}`"></div>
           <p>{{prop}}</p>
         </div>
       </template>
@@ -19,8 +19,9 @@ import './ani-base.scss'
 
 const baseList = reactive([
   'rotateX','rotateY','rotateZ',
-  'translateX','translateY','translateZ',
-  'scale','skewX','skewY'
+  'translateX','translateY','scale', 
+  // 'translateZ',
+  // 'skewX','skewY'
 ])
 
 const turns = reactive([

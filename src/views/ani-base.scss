@@ -57,12 +57,12 @@
 
 .scale-hover {
   &:hover {
-    animation: scale 5s infinite alternate;
+    animation: scale 2s infinite alternate;
   }
 }
 
 .scale {
-  animation: scale 5s infinite alternate;
+  animation: scale 2s infinite alternate;
 }
 
 .skewX-hover {
@@ -86,7 +86,6 @@
 
 @keyframes rotateX {
   0% {}
-
   100% {
     transform: rotateX(-360deg);
   }
@@ -110,21 +109,21 @@
 
 @keyframes translateX {
   0% {
-    transform: translateX(0);
+    transform: translateX(-20px);
   }
 
   100% {
-    transform: translateX(100%);
+    transform: translateX(20px);
   }
 }
 
 @keyframes translateY {
   0% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 
   100% {
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
 }
 
